@@ -19,7 +19,6 @@
 # * along with Textpattern. If not, see <https://www.gnu.org/licenses/>.
 # */
 
-#!/bin/sh
 echo '=> Checking `git`...'
 GIT_VERSION="$(git --version 2>&1)"
 if [ "$GIT_VERSION" != "command not found" ]; then
