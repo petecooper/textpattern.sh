@@ -75,6 +75,14 @@ else
   echo '   `zip` NOT found'
 fi
 
+echo '\n=> Checking `wget`...'
+TAR_VERSION="$(wget -v 2>&1)"
+if [ "$WGET_VERSION" != "command not found" ]; then
+  echo '   `wget` found'
+else
+  echo '   `wget` NOT found'
+fi
+
 echo '\n=> Checking `xz`...'
 XZ_VERSION="$(xz --version 2>&1)"
 if [ "$XZ_VERSION" != "command not found" ]; then
