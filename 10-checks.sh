@@ -19,7 +19,15 @@
 # * with Textpattern. If not, see <https://www.gnu.org/licenses/>.
 # */
 
-echo '=> Checking `git`...'
+echo '=> Checking `curl`...'
+GIT_VERSION="$(curl -V 2>&1)"
+if [ "$CURL_VERSION" != "command not found" ]; then
+  echo '   `curl` found'
+else
+  echo '   `curl` NOT found'
+fi
+
+echo '\n=> Checking `git`...'
 GIT_VERSION="$(git --version 2>&1)"
 if [ "$GIT_VERSION" != "command not found" ]; then
   echo '   `git` found'
