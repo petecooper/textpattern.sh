@@ -1,6 +1,8 @@
 #!/bin/sh
 
 #/*
+#/* This file is part of:
+#/*
 # * textpattern.sh
 # * https://github.com/petecooper/textpattern.sh/
 # *
